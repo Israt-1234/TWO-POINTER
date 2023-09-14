@@ -1,5 +1,6 @@
 //normal function using
 //sort must
+// o(n)
 #include<bits/stdc++.h>
 using namespace std;
 int solve(int a[], int x, int n)
