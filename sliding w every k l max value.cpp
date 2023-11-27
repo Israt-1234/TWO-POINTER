@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 using namespace std;
 //using ll=long long
@@ -9,30 +10,31 @@ int a[N];
 //int d[N][N],pref[N][N];
 struct ds{
   multiset<int>se;
-  ds(){}
-   void insert1(int x){
+
+   void insert(int x){
    se.insert(x);
    }
-   void erase1(int x){
+   void erase(int x){
    se.erase(se.find(x));
    }
    int get_max(){
    return *(--se.end());
    }
 
-};
+}ds;
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
   int n ,k; cin>>n>>k;
+ //  ds window;
   for(int i=1;i<=n;i++)
     cin>>a[i];
   for(int i=1;i<=n;i++){
-    Ds.insert1(a[i]);
+   ds.insert(a[i]);
     if(i>=k){
-        cout<<Ds.get_max()<<" ";
-        Ds.erase1(a[i-k+1]);
+        cout<<ds.get_max()<<" ";
+        ds.erase(a[i-k+1]);
     }
   }
   return 0;
