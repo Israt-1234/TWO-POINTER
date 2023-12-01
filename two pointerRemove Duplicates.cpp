@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define yes cout<<YES<<endl
-#define yes cout<<NO<<endl
+#define yes cout<<"YES"<<endl
+#define no cout<<"NO"<<endl
 const int N=1005;
 //int d[N][N],pref[N][N];
 int main()
